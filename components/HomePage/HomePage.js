@@ -32,6 +32,8 @@ const HomePage = () => {
   if (isLoading) {
     return (
       <div className="h-screen flex items-center justify-center">
+
+      
         <div className="text-4xl font-bold relative">
           <span className="text-black">Krischal</span>
           <span className="text-blue-600">.dev</span>
@@ -50,7 +52,6 @@ const HomePage = () => {
     <>
     <Navbar />
     <Hero />
-    
     </>
 
   ) 

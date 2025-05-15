@@ -1,6 +1,7 @@
 import React from 'react'
 import { Monoton } from 'next/font/google'
 import { Code, Brain, Sparkles, MapPinPlusIcon } from 'lucide-react'
+import Lanyard from '@/Lanyard/Lanyard';
 const monoton = Monoton({
     subsets: ["latin"],
     weight: ["400"],
@@ -8,7 +9,9 @@ const monoton = Monoton({
 const Hero = () => {
   return (
     <section className="min-h-screen bg-black flex items-center justify-center px-4 py-16">
-      <div className="max-w-4xl w-full">
+              <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+        
+      <div className="max-w-4xl w-full right-90 ">
         <div className="text-center mb-12">
           <h1 
             className={`${monoton.className} text-5xl md:text-7xl lg:text-9xl font-bold text-white relative mb-4`}
@@ -79,6 +82,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {/* <div className='hidden md:block relative z-1 border-2 border-red-500 w-full'> */}
+        {/* </div> */}
+
     </section>
   )
 }
