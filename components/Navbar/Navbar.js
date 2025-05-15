@@ -13,16 +13,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`${montserrat.className} fixed top-4 left-0 right-0 z-50 dark-bg grey-shadow rounded-full p-2 md:w-96 mx-auto`}>
+    <nav className={`${montserrat.className} fixed top-4 left-0 right-0 z-50 dark-bg grey-shadow rounded-full p-2 md:w-[500px] mx-auto`}>
       <div className="nav-container md:centered-container">
-        <div className="flex justify-between items-center h-12">
-          <div className="flex items-center">
+        <div className="flex justify-between items-center  h-12">
+          <div className="flex items-center ">
             <div className="circular-logo mr-2">
               <div className="text-xl font-bold text-gray-800">
                 <Earth className="w-6 h-6" />
               </div>
             </div>
-            <span className="text-white font-bold text-lg md:text-xl">Kris</span>
+            {/* <span className="text-white font-bold text-lg md:text-xl">Kris</span> */}
           </div>
           
           <div className="flex items-center">
@@ -54,7 +54,7 @@ const Navbar = () => {
               </svg>
             </button>
             
-            <div className={`md:flex space-x-4 ${isOpen ? 'mobile-nav' : 'hidden'} md:space-x-4` }>
+            <div className={`md:flex space-x-4 ${isOpen ? 'mobile-nav' : 'hidden'} md:space-x-4 items-center` }>
               <a 
                 href="#about" 
                 className="nav-link text-white hover:text-primary transition-colors duration-300 font-bold"
@@ -66,6 +66,15 @@ const Navbar = () => {
                 className="nav-link text-white hover:text-primary transition-colors duration-300 font-bold"
               >
                 Projects
+              </a> 
+              <a 
+                href="#projects" 
+                className="nav-link text-white hover:text-primary transition-colors duration-300 font-bold"
+              >
+                <button className='btn btn-primary'>
+
+                You are?
+                </button>
               </a>
             </div>
           </div>
