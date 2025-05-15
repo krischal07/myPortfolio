@@ -1,25 +1,47 @@
 import React from 'react'
-
+import { Monoton } from 'next/font/google'
+import { Code, Brain, Sparkles, MapPinPlusIcon } from 'lucide-react'
+const monoton = Monoton({
+    subsets: ["latin"],
+    weight: ["400"],
+  });
 const Hero = () => {
   return (
     <section className="min-h-screen bg-black flex items-center justify-center px-4 py-16">
       <div className="max-w-4xl w-full">
         <div className="text-center mb-12">
           <h1 
-            className="text-5xl md:text-8xl font-bold text-white mb-4 relative"
+            className={`${monoton.className} text-5xl md:text-7xl lg:text-9xl font-bold text-white relative mb-4`}
             style={{
               background: 'linear-gradient(45deg, #4F46E5, #6366F1, #818CF8)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}
           >
-            <span className="block">Krischal Shrestha</span>
-            <span className="block">Ideas into</span>
-            <span className="block">Reality</span>
+            <span className="block">Krischal </span>
+            <span className="block">Shrestha </span>
           </h1>
-          <p className="text-xl text-gray-300">
-            Full Stack Developer | Problem Solver | Creator
-          </p>
+          {/* <div className="absolute top-60 left-1/2 -translate-x-1/2 -mt-24 z-10">
+            <img 
+              src="/krischal.jpg" 
+              alt="Krischal Shrestha" 
+              className="w-48 h-48 md:w-64 md:h-64 rounded-2xl object-cover"
+            />
+          </div> */}
+          <div className="flex justify-center gap-4 text-xl text-gray-300">
+            <div className="flex items-center gap-2">
+              <Code className="w-5 h-5" />
+              <span>Software Developer</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPinPlusIcon className="w-5 h-5" />
+              <span>Kathmandu</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5" />
+              <span>Creator</span>
+            </div>
+          </div>
         </div>
 
         <div className="mt-16">
