@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
+import Hero from '../Hero/Hero'
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true)
-  const [progress, setProgress] = useState(0)
+  const [progress, setProgress] = useState(20)
 
   useEffect(() => {
     // Simulate loading time with progress
@@ -45,7 +46,14 @@ const HomePage = () => {
     );
   }
 
-  return <Navbar />
+  return(
+    <>
+    <Navbar />
+    <Hero />
+    
+    </>
+
+  ) 
 }
 
 export default HomePage
